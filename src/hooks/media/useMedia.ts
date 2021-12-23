@@ -18,21 +18,20 @@ export const useMedia = () => {
       const dirtyMetadata = await ref.getMetadata();
       const metadata = JSON.parse(JSON.stringify(dirtyMetadata)); // remove undefined fields;
 
-      await firestore
-        .collection('media')
-        .add({ url, metadata, createdBy: userId });
+      await firestore.collection('media').add({ url, metadata, createdBy: userId });
       setLoading(false);
       setLoaded(true);
       return true;
     },
-    [firebase, firestore, userId],
+    [firebase, firestore, userId]
   );
+
   const getMediaData = useCallback(
-    async docPath => {
+    async (docPath) => {
       const ref = await firestore.doc(docPath).get();
       return ref.data();
     },
-    [firestore],
+    [firestore]
   );
 
   return {

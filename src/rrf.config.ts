@@ -9,7 +9,14 @@ import store from './store';
 
 // Firebase Init
 const firebaseConfig = {
-  // FB config here
+  apiKey: "AIzaSyCgtk4IYCHk9VMZtXmPOgMkFXkFj41IMxs",
+  authDomain: "nhco-filemanager.firebaseapp.com",
+  databaseURL: "https://nhco-filemanager.firebaseio.com",
+  projectId: "nhco-filemanager",
+  storageBucket: "nhco-filemanager.appspot.com",
+  messagingSenderId: "892618766738",
+  appId: "1:892618766738:web:a2191a1510fb476579694b",
+  measurementId: "G-SPX5T9N9H8"
 };
 
 const rrfConfig = {
